@@ -137,7 +137,18 @@ public class Main2Activity extends AppCompatActivity implements Runnable {
 
             startActivityForResult(config,3);
 
-            //事件处理代码
+          /*  //写入数据库
+            RateItem item1=new RateItem("aaa","333");
+            RateManager manager=new RateManager(this);
+            manager.add(item1);
+            manager.add(new RateItem("bbb","23.5"));
+            //查询
+            List<RateItem> testList=manager.listAll();
+            for(RateItem i:testList){
+
+            }
+            */
+          //事件处理代码
         }
 
         return super.onOptionsItemSelected(item);

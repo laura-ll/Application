@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
@@ -38,7 +39,7 @@ public class MyList2 extends android.app.ListActivity implements Runnable,Adapte
         handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {
-                super.handleMessage(msg);
+
                 if (msg.what == 7) {
                     List<HashMap<String, String>> list2 = (List<HashMap<String, String>>) msg.obj;
                     //生成适配器的Item和动态数组对应元素
@@ -48,6 +49,7 @@ public class MyList2 extends android.app.ListActivity implements Runnable,Adapte
                           setListAdapter(listadapter);
 
                 }
+                super.handleMessage(msg);
             }
         };
     /*    getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -82,10 +84,9 @@ public class MyList2 extends android.app.ListActivity implements Runnable,Adapte
         public void run () {
 
             List<HashMap<String, String>> retList = new ArrayList<HashMap<String, String>>();
-            Bundle bundle = new Bundle();
+            Document doc;
             try {
-
-                Document doc = Jsoup.connect("http://www.boc.cn/sourcedb/whpj/").get();
+                doc = Jsoup.connect("http://www.boc.cn/sourcedb/whpj/").get();
                 Elements tables = doc.getElementsByTag("table");
 
                 Element table2 = tables.get(1);
@@ -95,7 +96,8 @@ public class MyList2 extends android.app.ListActivity implements Runnable,Adapte
                     Element td2 = tds.get(t + 5);
                     String str1 = td1.text();
                     String val = td2.text();
-
+                    Log.i(TAG,str1);
+                    Log.i(TAG,val);
                     HashMap<String, String> map = new HashMap<String, String>();
                     map.put("ItemTitle", str1);
                     map.put("ItemDetail", val);

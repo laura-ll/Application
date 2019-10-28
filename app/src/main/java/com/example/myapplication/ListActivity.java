@@ -28,6 +28,7 @@ public class ListActivity extends  android.app.ListActivity implements  Runnable
         int i;
         for(i=0;i<100;i++){
             list1.add("item"+i);
+
         }
         ListAdapter adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,list1);//
        setListAdapter(adapter);

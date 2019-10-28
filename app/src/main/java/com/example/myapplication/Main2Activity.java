@@ -145,7 +145,7 @@ public class Main2Activity extends AppCompatActivity implements Runnable {
             //查询
             List<RateItem> testList=manager.listAll();
             for(RateItem i:testList){
-
+            Log.i("TAG","");
             }
             */
           //事件处理代码

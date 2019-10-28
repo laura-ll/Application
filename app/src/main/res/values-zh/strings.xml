@@ -3,4 +3,8 @@
     <string name="app_name">My Application</string>
     <string name="HB">生日快乐</string>
     <string name="FR">你的朋友</string>
+    <string name="b1">得1分</string>
+    <string name="b2">得2分</string>
+    <string name="b3">得3分</string>
+    <string name="b">重置</string>
 </resources>

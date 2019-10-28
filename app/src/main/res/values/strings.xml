@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="button">ok </string>
-    <string name="user_n"> user </string>
+    <string name="user_n">user</string>
     <string name="psw">password </string>
-    <string name="button1"> log </string>
+    <string name="button1">log</string>
     <string name="button2">reg </string>
     <string name="HB">happy birthday </string>
     <string name="FR">yourfriend </string>
-    <string name="hint_str">input your address </string>
+    <string name="hint_str">input temporary </string>
+    <string name="b1">*1 points</string>
+    <string name="b2">*2 points</string>
+    <string name="b3">*3 points</string>
+    <string name="b">RESET</string>
 </resources>

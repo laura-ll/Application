@@ -92,7 +92,7 @@ public class MyList2 extends android.app.ListActivity implements Runnable,Adapte
                 Element table2 = tables.get(1);
                 Elements tds = table2.getElementsByTag("td");
                 for (int t = 0; t < tds.size(); t += 8) {
-                    Element td1 = tds.get(t);//取第一列数据
+                    Element td1 = tds.get(t);//取第一列数
                     Element td2 = tds.get(t + 5);
                     String str1 = td1.text();
                     String val = td2.text();
